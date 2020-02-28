@@ -1,0 +1,20 @@
+Control Audio and Video with Arduino and Processing
+This is my first embeded Arduino + Processing experience. 
+
+Brief
+The application was designed to control audio and video, handled by Proccesing script over a MQTT protocol.
+The application has been featured with custom control dashboard to have the chance of control the files like "play", "pause",
+"stop" and "rewind", also "volume" can be controlled.
+
+The Arduino code was written for a Wemos-D1. It collects information from four ultrasonic sensors, which two are attached 
+to "sala_1" topic meanwhile left two sensors are attached to "sala_2" topic.
+
+Behavior
+When the object is in range of sensors this send the message to related topic over the network.
+Both applications of proccesing should be attached to same network to hear messages and take actions if its needed.
+
+Notes
+As many must know, Wemos-D1 runs with 3,3Vcc, follow that and after several research, trigger and echo pins of HC-RS04 can 
+be taken quite easy by the Wemos. Also was featured with a DO trough an optocoupler PC187.
+
+Enjoy it. 
